@@ -61,26 +61,26 @@
                         function print_cmpltd_courses(){
                             echo "<ul>";
                             foreach ($this->cmpltd_courses as $course) {
-                                echo "<li><span style='left:-45%;position:relative;'>" . $course . "</span></li>";
+                                echo "<li><span style='left:-22%;position:relative;'>" . $course . "</span></li>";
                             }
                             echo "</ul>";
                         }
                     }
                     $student1 = new Student();
                     $student1->name = "Pranav Yngvi";
-                    $student1->cmpltd_courses = ["SWE301", "PHY302", "MTH001"];
+                    $student1->cmpltd_courses = ["Fundamental of Web Design", "Discrete Mathematics", "Writing Skills in Arabic"];
 
                     $student2 = new Student();
                     $student2->name = "Valerian Iva";
-                    $student2->cmpltd_courses = ["SWE322", "SWE411", "MTH001", "CIS304", "CIS386"];
+                    $student2->cmpltd_courses = ["Operating Systems", "Interactive Media", "Physics II", "Computer Architecture", "Advanced Web Programming"];
 
                     $student3 = new Student();
                     $student3->name = "Tóki Gani";
-                    $student3->cmpltd_courses = ["MTH104", "NES483", "NES 481", "NES341", "CIS386"];
+                    $student3->cmpltd_courses = ["Differential Equations", "Advanced User Interface Design", "Information Security", "Computer Ethics"];
 
                     $student4 = new Student();
                     $student4->name = "Orvokki Anapa";
-                    $student4->cmpltd_courses = ["MIS327", "MIS329", "ARB202", "MIS428"];
+                    $student4->cmpltd_courses = ["Software Quality Assurance", "Game Development", "Software Requirement Engineering", "Project Management"];
 
 
                     $students = [$student1, $student2, $student3, $student4];
@@ -96,8 +96,7 @@
                         echo "<p style='text-align:left;'><b>Student ID: </b>" . $students[$i]->get_id() . "</p>";
                         echo "<p style='text-align:left;'><b>Finished Courses: </b>";
                         echo "<p style='left:-144px;'>".$students[$i]->print_cmpltd_courses()."</p>";
-                        if(in_array("SWE322",$students[$i]->cmpltd_courses)){
-
+                        if(in_array("Advanced Web Programming",$students[$i]->cmpltd_courses)){
                             echo "<p style='text-align:left'><b>This student is a Full Stack Developer!</b></p> ";
                         }
                         echo "</div></div>";
