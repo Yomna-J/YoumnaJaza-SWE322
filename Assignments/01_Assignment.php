@@ -67,7 +67,8 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <img src="https://image.freepik.com/free-photo/close-up-people-s-hands-working-computers_53876-15341.jpg" alt="computer image" class="img-fluid" style="padding-top:3.5%;max-width:100%;height:auto;">
+                <img src="https://image.freepik.com/free-photo/close-up-people-s-hands-working-computers_53876-15341.jpg" alt="computer image" class="img-fluid" style="padding-top:7%;max-width:100%;height:auto;">
+                <p class="text-center" style="font-style:italic;font-size:10px;">Designed by Freepik</p>
             </div>
         </div>
     </div>
