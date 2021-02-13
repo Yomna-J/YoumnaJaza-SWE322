@@ -2,7 +2,7 @@
 This is a repository for Advanced Web Programming course. It includes Assignments, Practical Sessions, and the Project. 
   
 By: Youmna Jaza  
-Course: SWE322 Advanced Web Programming
+Course: SWE322 Advanced Web Programming  
 Lecturer: Ms. Layla Albabtain  
 Date: Second Semester 2020/2021 (20202)
 ***
