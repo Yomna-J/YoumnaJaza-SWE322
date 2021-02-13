@@ -68,7 +68,7 @@
             </div>
             <div class="col-sm-6">
                 <img src="https://image.freepik.com/free-photo/close-up-people-s-hands-working-computers_53876-15341.jpg" alt="computer image" class="img-fluid" style="padding-top:7%;max-width:100%;height:auto;">
-                <p class="text-center" style="font-style:italic;font-size:10px;">Designed by Freepik</p>
+                <div class="text-center" style="font-style:italic;font-size:10px;"><a href="https://www.freepik.com/photos/business">Business photo created by rawpixel.com - www.freepik.com</a></div>
             </div>
         </div>
     </div>
