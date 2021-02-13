@@ -14,7 +14,7 @@
 
 <body style="background-color:#E8E8E8">
     <div class="" style="color:white;background-color:#939393;">
-        <h1 style="height:100px;padding-top:20px;color:#454545;text-align:center;margin:0;font-size:39px;font-family: Gotham, Tahoma, sans-serif;">My First PHP Assignment</h1>
+        <h1 style="height:100px;padding-top:20px;color:#ECECEC;text-align:center;margin:0;font-size:39px;font-family: Gotham, Tahoma, sans-serif;">My First PHP Assignment</h1>
     </div>
     <div class="container">
         <div class="row" style="padding-top:5%"> </div>
