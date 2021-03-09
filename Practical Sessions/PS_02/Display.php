@@ -31,11 +31,7 @@
 
     <?php
     require("db_connection.php");
-    $connection = mysqli_connect($host, $username, $pass, $db_name);
-
-    if (!$connection) {
-        echo mysqli_errno($connection) . " " . mysqli_error($connection);
-    }
+   
 
     $query = "SELECT * FROM `s_phone_lists`"; 
     $result = mysqli_query($connection, $query); 

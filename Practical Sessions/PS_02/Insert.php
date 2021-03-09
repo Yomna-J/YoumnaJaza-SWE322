@@ -16,7 +16,7 @@
     <?php
     require("db_connection.php");
 
-    $connection = mysqli_connect($host, $username, $pass, $db_name);
+  
 
     if ($connection) {
         $query = "INSERT INTO `s_phone_lists`(`name`, `phone`, `mobile`) VALUES ('Brony', '111000101','1111111101')";
