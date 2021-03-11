@@ -28,22 +28,26 @@
 
         if(isset($_GET['c_code'])){
             $c_code = $_GET['c_code'];
-
+            
             $query ="SELECT * FROM `courses` WHERE `c_code`='$c_code'";
-            $result = mysqli_query($connection, $query);
-
-            if ($result) {
-                echo "<table> <tr>";
-                echo "<th>Course Code</th> <th>Course Name</th> <th>Description</th><th>Year</th></tr>";
-                while ($result_row = mysqli_fetch_row($result)) {
-                    echo "<tr>";
-                    echo "<td>$result_row[0]</td>";
-                    echo "<td>$result_row[1]</td>";
-                    echo "<td>$result_row[2]</td>";
-                    echo "<td>$result_row[3]</td>";
-                    echo "</tr>";
-                }
-                echo "</table>";
+           
+            if ($result = mysqli_query($connection, $query)) {
+                if(mysqli_num_rows($result) > 0){
+                    $result = mysqli_query($connection, $query);
+                    echo "<table> <tr>";
+                    echo "<th>Course Code</th> <th>Course Name</th> <th>Description</th><th>Year</th></tr>";
+                    while ($result_row = mysqli_fetch_row($result)) {
+                        echo "<tr>";
+                        echo "<td>$result_row[0]</td>";
+                        echo "<td>$result_row[1]</td>";
+                        echo "<td>$result_row[2]</td>";
+                        echo "<td>$result_row[3]</td>";
+                        echo "</tr>";
+                    }
+                    echo "</table>";
+                 }else{
+                     echo "Course doesn't exist";
+                 }
             } else {
                 echo "Error: " . mysqli_error($connection);
             }
