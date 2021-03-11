@@ -57,6 +57,8 @@
 
     <br>
     <p style="font-style:italic;font-weight: bold;">Pages:</p>
-    <a style="color:white;" href="Insert.php">Insert Page</a>
+    <a style="color:white;" href="Insert.php">Insert Page</a><br><br>
+    <a style="color:white;" href="updatePage.php">Update Page</a>
+
 </body>
 </html>

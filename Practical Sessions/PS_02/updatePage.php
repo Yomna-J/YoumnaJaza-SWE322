@@ -1,29 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+
+<body style='color:#03DC01;background-color:black;font-family:courier, monospace;'>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            text-align: center;
+        }
+
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            color: white
+        }
+
+        th {
+            font-weight: bold;
+        }
+    </style>
+
+    <h2 style="display: inline-block">Youmna Jaza</h2>
+    <h3 style="display: inline-block;margin-left:30%;">201812214</h3>
+    <p style="border-top:0.5px solid white;"></p>
+
+
     <h2>Update your information</h2>
 
     <form action='Update.php' method='POST'>
-    <label for="name">Name:</label> <br>
-    <input type="text" name="name" >
-    <br>
-    <h5>Data to update: </h5>
-    <label for="name">Phone:</label> <br>
-    <input tpye="text" name="phone">
-    <br>
-    <label for="name">Mobile:</label> <br>
-    <input type="text" name="mobile">
-    <br><br>
-    <input type="submit" value="Submit">
+        <label for="name">Name:</label> <br>
+        <input type="text" name="name">
+        <br>
+        <h5>Data to update: </h5>
+        <label for="name">Phone:</label> <br>
+        <input tpye="text" name="phone">
+        <br>
+        <label for="name">Mobile:</label> <br>
+        <input type="text" name="mobile">
+        <br><br>
+        <input type="submit" value="Update">
 
     </form>
+    <br>
+    
+    <p style="font-style:italic;font-weight: bold;">Pages:</p>
+    <a style="color:white;" href="Insert.php">Insert Page</a><br><br>
+    <a style="color:white;" href="Display.php">Display Page</a>
 
 
 </body>
+
 </html>

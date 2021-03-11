@@ -44,7 +44,9 @@
     <a style="color:white;" href="https://www.java67.com/2019/06/difference-between-varchar-and-char-data-type-in-sql-server.html">Difference between VARCHAR and CHAR data type in SQL Server</a>
     <br>
     <p style="font-style:italic;font-weight: bold;">Pages:</p>
-    <a style="color:white;" href="Display.php">Display Page</a>
+    <a style="color:white;" href="Display.php">Display Page</a><br><br>
+    <a style="color:white;" href="updatePage.php">Update Page</a>
+
 
 
 </body>
