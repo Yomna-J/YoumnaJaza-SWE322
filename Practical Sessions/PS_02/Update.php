@@ -9,7 +9,7 @@
       
        $query = "UPDATE `s_phone_lists` SET `phone`=$phone,`mobile`=$mobile WHERE `name`='$name'";
        
-       if (mysqli_query($connection, $query)) {
+    if (mysqli_query($connection, $query)) {
             echo "<br><h3>Data Has Been Updated Successfully!</h3>";
         } else {
             echo "<br>Error: " . mysqli_errno($connection) . " " . mysqli_error($connection);
