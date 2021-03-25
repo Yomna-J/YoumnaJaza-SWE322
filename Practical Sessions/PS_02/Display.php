@@ -58,7 +58,8 @@
     <br>
     <p style="font-style:italic;font-weight: bold;">Pages:</p>
     <a style="color:white;" href="Insert.php">Insert Page</a><br><br>
-    <a style="color:white;" href="updatePage.html">Update Page</a>
+    <a style="color:white;" href="updatePage.html">Update Page</a><br><br>
+    <a style="color:white;" href="../PS_03/Search.php">Search Page</a>
 
 </body>
 </html>
