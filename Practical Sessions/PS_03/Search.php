@@ -69,7 +69,6 @@
         ${$column_name} = sanitize_sql($connection, $_GET['search_box']);
         
         $query = " SELECT `id`, `name`, `phone`, `mobile` FROM `s_phone_lists` WHERE `$column_name` LIKE \"%${$column_name}%\""; #not exactly matched
-        # SQL injection :p
         if ($result = mysqli_query($connection, $query)) {
             if (mysqli_num_rows($result) > 0) {
                 $result = mysqli_query($connection, $query);
