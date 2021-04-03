@@ -8,12 +8,11 @@
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $stmt = $connection->prepare("INSERT INTO `user_accounts`(`user_name`, `email`, `password`) VALUES (?,?,?)");
         $stmt->bind_param('sss', $username, $email, $password);
-        if(false === $stmt->execute){
+        if(false === $stmt->execute()){
             echo "An error has occurred";
             $stmt->close();
             exit();
         }else{
-            $stmt->execute();
             $stmt->close();
             mysqli_close($connection);
             header('Location: login.html');
