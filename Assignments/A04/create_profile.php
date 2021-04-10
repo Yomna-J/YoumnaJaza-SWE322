@@ -1,7 +1,6 @@
 <?php
     include('session_check.php');
-    session_start(); # Page Can't be accessed unless the user is logged in
-    session_check();
+    session_check(); # Page Can't be accessed unless the user is logged in
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +31,7 @@
                 <li><a href="change_password.php">Change Password</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+                <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
             </ul>
         </div>
     </nav>
@@ -94,7 +93,6 @@
         if(isset($_POST['create']) && isset($_POST['f_name']) && isset($_POST['l_name']) && isset($_POST['c_phone'])
             && isset($_POST['c_email']) && isset($_POST['city']) && isset($_POST['country'])){
             
-            session_start();
             $u_id = $_SESSION['id'];
             $fname = fix_string($_POST['f_name']);
             $lname = fix_string($_POST['l_name']);

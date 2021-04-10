@@ -1,7 +1,6 @@
 <?php
-    include('session_check.php');
-    session_start(); # Page Can't be accessed unless the user is logged in
-    session_check();
+  include('session_check.php');
+  session_check();
 ?>
 
 <!DOCTYPE html>

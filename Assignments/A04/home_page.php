@@ -1,17 +1,8 @@
 <?php
-  session_start(); # Home page Can't be accessed unless the user is logged in
-  if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
-    header("Location: login.html");
-  }else{
-    $inactive = 60; 
+# Home page Can't be accessed unless the user is logged in
+include('session_check.php');
+session_check();
 
-    if (isset($_SESSION['id']) && (time() - $_SESSION['id'] > $inactive)) {
-      // last request was more than 2 hours ago
-      session_unset();     // unset $_SESSION variable for this page
-      session_destroy();   // destroy session data
-  }
-  $_SESSION['id'] = time(); // Update session
-  }
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +36,7 @@
   </nav>
 
   <div class="container">
-    <h3>Welcome!</h3>
+    <h3><b>Welcome!</b></h3>
   </div>
 
 </body>
