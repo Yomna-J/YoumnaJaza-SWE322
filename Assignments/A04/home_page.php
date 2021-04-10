@@ -19,25 +19,25 @@
   }
   ?>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="profile.php">Profile</a></li>
+        <li><a href="change_password.php">Change Password</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+      </ul>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Profile</a></li>
-      <li><a href="change_password.php">Change Password</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
-    </ul>
+  </nav>
+
+  <div class="container">
+    <h3>Welcome!</h3>
+    <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
   </div>
-</nav>
-  
-<div class="container">
-  <h3>Welcome!</h3>
-  <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
-</div>
 
 </body>
 

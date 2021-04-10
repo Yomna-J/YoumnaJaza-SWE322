@@ -1,5 +1,4 @@
-  // Form JS Validation
-// Form JS Validation
+// Registration page
 function validate(form) {
     var fail = validateEmail(form.email.value);
     fail += validateUsername(form.username.value);
@@ -43,7 +42,7 @@ function validatePassword(field) {
         return "";
     }
 }
-
+// Change password page
 function validateNewPassword(form){
     var fail = validatePassword(form.new_pass.value);
 
@@ -52,5 +51,66 @@ function validateNewPassword(form){
     } else {
         alert(fail);
         return false;
+    }
+}
+// Create profile page
+function validateProfile(form){
+    var fail = validateFirstName(form.f_name.value);
+    fail += validateLastName(form.l_name.value);
+    fail += validatePhone(form.c_phone.value);
+    fail += validateEmail(form.c_email.value);
+    fail += validateCity(form.city.value);
+    fail += validateCountry(form.country.value);
+
+    if (fail == "") {
+        return true;
+    } else {
+        alert(fail);
+        return false;
+    }
+}
+function validateFirstName(field){
+    if (field == "") {
+        return "No First Name was entered.\n";
+    } else if (!(/^[a-z ,.'-]+$/i.test(field))) { 
+        return "Invalid First Name.\n";
+    } else {
+        return "";
+    }
+}
+function validateLastName(field){
+    if (field == "") {
+        return "No Last Name was entered.\n";
+    } else if (!(/^[a-z ,.'-]+$/i.test(field))) { 
+        return "Invalid last name.\n";
+    } else {
+        return "";
+    }
+}
+function validatePhone(field){
+    if (field == "") {
+        return "No Contact Phone number was entered.\n";
+    } else if (!(/^05[0-9]{8}$/.test(field))) { 
+        return "Invalid phone number.\n";
+    } else {
+        return "";
+    }
+}
+function validateCity(field) {
+    if (field == "") {
+        return "No City was entered.\n";
+    } else if (!(/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/.test(field))) { 
+        return "Invalid City.\n";
+    } else {
+        return "";
+    }
+}
+function validateCountry(field) {
+    if (field == "") {
+        return "No Country was entered.\n";
+    } else if (!(/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/.test(field))) { 
+        return "Invalid Country.\n";
+    } else {
+        return "";
     }
 }

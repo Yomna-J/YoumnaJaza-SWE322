@@ -5,6 +5,7 @@
         $string = stripslashes($string);
         return htmlentities($string);
     }
+    # Registration Page
     function validate_form($email, $username, $password){
         $fail = validate_email($email);
         $fail .= validate_username($username);
@@ -44,5 +45,63 @@
             return "";
         }
     }
+    function validate_profile($fname, $lname, $c_phone, $c_email, $city, $country){
+        $fail = validate_fname($fname);
+        $fail .= validate_lname($lname);
+        $fail .= validate_phone($c_phone);
+        $fail .= validate_email($c_email);
+        $fail .= validate_city($city);
+        $fail .= validate_country($country);
 
-?>
+        if($fail  == ""){
+            return true; 
+        }else{
+            return $fail;
+        }
+  
+    }
+    function validate_fname($fname){
+        if(empty($fname)){
+            return "No First Name was entered.<br>";
+        }else if(!(preg_match("/^[a-z ,.'-]+$/i", $fname))){
+            return "Invalid First Name.<br>";
+        }else{
+            return "";
+        }
+    }
+    function validate_lname($lname){
+        if(empty($lname)){
+            return "No Last Name was entered.<br>";
+        }else if(!(preg_match("/^[a-z ,.'-]+$/i", $lname))){
+            return "Invalid Last Name.<br>";
+        }else{
+            return "";
+        }
+    }
+    function validate_phone($phone){
+        if(empty($phone)){
+            return "No Contact Phone number was entered.<br>";
+        }else if(!(preg_match("/^05[0-9]{8}$/", $phone))){
+            return "Invalid Phone Number.<br>";
+        }else{
+            return "";
+        }
+    }
+    function validate_city($city){
+        if(empty($city)){
+            return "No City was entered.<br>";
+        }else if(!(preg_match("/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/", $city))){
+            return "Invalid City.<br>";
+        }else{
+            return "";
+        }
+    }
+    function validate_country($country){
+        if(empty($country)){
+            return "No Country was entered.<br>";
+        }else if(!(preg_match("/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/", $country))){
+            return "Invalid Country.<br>";
+        }else{
+            return "";
+        }
+    }
