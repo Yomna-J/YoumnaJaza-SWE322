@@ -17,14 +17,13 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">WebSiteName</a>
+                <a class="navbar-brand" href="home_page.php">Home</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="#">Profile</a></li>
+                <li><a href="profile.php">Profile</a></li>
                 <li class="active"><a href="change_password.php">Change Password</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
             </ul>
         </div>

@@ -15,7 +15,7 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">WebSiteName</a>
+                <a class="navbar-brand" href="home_page.php">Home</a>
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="profile.php">Profile</a></li>

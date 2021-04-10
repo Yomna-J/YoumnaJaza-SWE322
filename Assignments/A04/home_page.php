@@ -22,10 +22,10 @@
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">WebSiteName</a>
+        <a class="navbar-brand" class="active" href="#">Home</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="profile.php">Profile</a></li>
+        <li><a href="profile.php">Profile</a></li>
         <li><a href="change_password.php">Change Password</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -36,7 +36,6 @@
 
   <div class="container">
     <h3>Welcome!</h3>
-    <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
   </div>
 
 </body>
