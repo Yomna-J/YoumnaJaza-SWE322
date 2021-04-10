@@ -4,7 +4,6 @@
     session_check();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,13 +11,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- --------------Bootstrap------------- -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <title>Profile</title>
 
     <style>
-
         th{
             font-size: 2rem;
             padding: 10px;
@@ -27,7 +27,6 @@
             font-size: 1.5rem;
         }
     </style>
-
 </head>
 
 <body>
@@ -46,9 +45,7 @@
         </div>
     </nav>
 
-
     <?php
-
         include('../../../../../config/A03/config.php');
 
         $id = $_SESSION['id'];
@@ -62,7 +59,7 @@
                     echo "<div class='container'>
                     <div class='table-responsive'>
                     <table >
-                    <h3><b>Profile Information</b></h3>
+                    <h2><b>Profile Information</b></h2>
 
                         <tr>
                             <th class='col-md-3' class='display-2'>First Name: </th>
@@ -88,21 +85,13 @@
                             <th class='col-md-3'>Country: </th>
                             <td>$result_row[7]</td>
                         </tr>
-
                     </table>
-
-                    
-                    </div>
-                    
-                    </div>";
+                    </div></div>";
                 }
-               
             }
         }else {
             echo "An Error has Occurred";
         }
-
-
     ?>
 
 </body>
