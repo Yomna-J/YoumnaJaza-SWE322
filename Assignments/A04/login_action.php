@@ -15,9 +15,19 @@
             $result = $stmt->get_result();
             while ($row = $result->fetch_assoc()) {
                 if(password_verify($_POST['password'], $row['password'])){
-                    session_start();
+
                     $_SESSION['id'] = $row['u_id'];
-                    $_SESSION['came_from'] = $_SERVER['REQUEST_URI'];
+                    // 2 hours in seconds
+                    $inactive = 60; 
+                    ini_set('session.gc_maxlifetime', $inactive); // set the session max lifetime to 2 hours
+
+                    session_start();
+                    if (isset($_SESSION['id']) && (time() - $_SESSION['id'] > $inactive)) {
+                        // last request was more than 2 hours ago
+                        session_unset();     // unset $_SESSION variable for this page
+                        session_destroy();   // destroy session data
+                    }
+                    $_SESSION['id'] = time(); // Update session
                     header('Location: home_page.php');
                 }else{
                     die("Wrong username or password");

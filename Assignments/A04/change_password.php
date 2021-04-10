@@ -1,3 +1,9 @@
+<?php
+    include('session_check.php');
+    session_start(); # Page Can't be accessed unless the user is logged in
+    session_check();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +30,7 @@
                 <li class="active"><a href="change_password.php">Change Password</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+                <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
             </ul>
         </div>
     </nav>

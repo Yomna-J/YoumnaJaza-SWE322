@@ -1,3 +1,19 @@
+<?php
+  session_start(); # Home page Can't be accessed unless the user is logged in
+  if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
+    header("Location: login.html");
+  }else{
+    $inactive = 60; 
+
+    if (isset($_SESSION['id']) && (time() - $_SESSION['id'] > $inactive)) {
+      // last request was more than 2 hours ago
+      session_unset();     // unset $_SESSION variable for this page
+      session_destroy();   // destroy session data
+  }
+  $_SESSION['id'] = time(); // Update session
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,12 +28,6 @@
 </head>
 
 <body>
-  <?php
-  session_start();
-  if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
-    header("Location: login.html");
-  }
-  ?>
 
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -29,7 +39,7 @@
         <li><a href="change_password.php">Change Password</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+        <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
       </ul>
     </div>
   </nav>
