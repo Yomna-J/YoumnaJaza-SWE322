@@ -1,5 +1,5 @@
 <?php
-  include('session_check.php');
+  include('src/session_check.php');
   session_check();
 ?>
 
@@ -15,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- --------------JS Files--------------- -->
-    <script src="JsValidation.js"></script>
+    <script src="src/JsValidation.js"></script>
 
     <title>Change Password</title>
 </head>

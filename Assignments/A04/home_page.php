@@ -1,6 +1,6 @@
 <?php
   # Home page Can't be accessed unless the user is logged in
-  include('session_check.php');
+  include('src/session_check.php');
   session_check();
 ?>
 
