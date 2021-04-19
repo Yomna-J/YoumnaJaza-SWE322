@@ -13,8 +13,19 @@
         if(validate_form($email, $username, $password) == true){
             $stmt = $connection->prepare("INSERT INTO `user_account`(`username`, `email`, `password`) VALUES (?,?,?)");
             $stmt->bind_param('sss', $username, $email, $password);
-           
-        }        
+            if(false===$stmt->execute()){
+                echo ($stmt->error);
+                exit();
+            }
+            else {
+                echo "An account has been created"; 
+            }
+            
+            $stmt->close();
+        }
+
+        mysqli_close($conn)
+        
 
     }
 
