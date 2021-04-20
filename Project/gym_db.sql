@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2021 at 01:10 AM
+-- Generation Time: Apr 20, 2021 at 02:27 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -63,10 +63,20 @@ INSERT INTO `classes` (`class_id`, `class_name`, `trainer_name`, `class_date`, `
 
 CREATE TABLE `user_account` (
   `user_id` int(10) NOT NULL,
-  `username` int(10) NOT NULL,
-  `email` int(255) NOT NULL,
-  `password` int(255) NOT NULL
+  `username` varchar(10) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user_account`
+--
+
+INSERT INTO `user_account` (`user_id`, `username`, `email`, `password`) VALUES
+(1, 'f4lc0nH3r3', 'f4lc0nH3r3@fal.fal', '$2y$10$WbJNsUwQlPKmX/R5FqYIzu4961BmQm6fFlvs65.7zG3SFgnBF5kv6'),
+(2, 'Lamia_22', 'Lamia@lamia.la', '$2y$10$iyfSqBVr4V0UETgUvhze1eVBUjydw2uZiHpLB/CxaIMdRgxp2YGfi'),
+(3, 'Hal_3246', 'Halah@h.ha', '$2y$10$gLKbQdw4ICH/mn/jifTge.1qlhWZ4OZQfmX6kVkGehS6JnX1FVBbe'),
+(4, 'Yo_43', 'Yo@dsaj.dl', '$2y$10$iyfSqBVr4V0UETgUvhze1eVBUjydw2uZiHpLB/CxaIMdRgxp2YGfi');
 
 --
 -- Indexes for dumped tables
@@ -89,7 +99,9 @@ ALTER TABLE `classes`
 -- Indexes for table `user_account`
 --
 ALTER TABLE `user_account`
-  ADD PRIMARY KEY (`user_id`);
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -105,7 +117,7 @@ ALTER TABLE `classes`
 -- AUTO_INCREMENT for table `user_account`
 --
 ALTER TABLE `user_account`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
