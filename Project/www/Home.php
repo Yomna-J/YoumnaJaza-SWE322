@@ -26,7 +26,8 @@
                 }
 
             }
-            echo "</form>";
+            echo "<input type='submit' name='confirm' value='Confirm' />
+                  </form>";
         }
     }
 ?>
