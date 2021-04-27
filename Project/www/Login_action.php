@@ -1,30 +1,31 @@
 <?php 
 
+    include("../config/db_login.php");
+    include("../src/php/sanitizeInput.php");
 
-    include('C:/xampp/htdocs/SWE322/Assignment03/signinForm.php');
+    if (isset($_POST['login'])) {
+        $username= fix_string($_POST['username']);
+        $password= fix_string($_POST['password']); 
 
-    if (isset($_POST['submit'])) {
-        $username= $_POST['username'];
-        $u_password= $_POST['password']; 
-
-        $query= "SELECT * FROM user_accounts WHERE User_name = '$username'"; 
+        $query= "SELECT * FROM user_account WHERE username = '$username'"; 
         $result= mysqli_query($connection, $query);  
 
 
-        if(!$result) { die("An error has occured"); }
-        else { 
-            if(mysqli_num_rows($result)<=0) { die("Wrong username or password, please try again.");  }
-            else {  echo "Lgged in! Welcome."; }
+        if($result){
+            if(mysqli_num_rows($result) > 0){
+                $result_row = mysqli_fetch_row($result);
+                if($password === $result_row[3]){
+                    session_start();
+                    $_SESSION['id'] = $result_row[0];
+                    header('location: Home.php');
+                } else {
+                    die('Invalid username or password.');
+                }
+            } else {
+                die("Invalid username or password.");
             }
-
-            if ($stmt= $connection->prepare('SELECT * FROM user_account WHERE username = ?')) {
-                $stmt->bind_param('s', $_post['username']);
-                $stmt->excute();
-                $stmt->store_result();
-
-                $stmt->close();
-            } 
+        } else {
+             die("Connection error.");
+            }
         }
-
-            mysqli_close($connection)
 ?>
