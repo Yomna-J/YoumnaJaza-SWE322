@@ -10,15 +10,16 @@
 
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
+        # Test1234$
         if(validate_form($email, $username, $hash) == true){
             $stmt = $connection->prepare("INSERT INTO `user_account`(`username`, `email`, `password`) VALUES (?,?,?)");
             $stmt->bind_param('sss', $username, $email, $hash);
-            if(false===$stmt->execute()){
+            if(false === $stmt->execute()){
                 echo "An error occurred";
                 exit();
             }
             else {
-                header("Location: Login.php");
+                header("Location: Login.html");
             } 
             $stmt->close();
         }
