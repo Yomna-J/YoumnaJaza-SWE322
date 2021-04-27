@@ -14,7 +14,7 @@
         if($result){
             if(mysqli_num_rows($result) > 0){
                 $result_row = mysqli_fetch_row($result);
-                if($password === $result_row[3]){
+                if(password_verify($_POST['password'], $result_row[3])){
                     session_start();
                     $_SESSION['id'] = $result_row[0];
                     header('location: Home.php');
