@@ -10,7 +10,6 @@
         $query= "SELECT * FROM user_account WHERE username = '$username'"; 
         $result= mysqli_query($connection, $query);  
 
-
         if($result){
             if(mysqli_num_rows($result) > 0){
                 $result_row = mysqli_fetch_row($result);
