@@ -15,4 +15,7 @@ Date: Second Semester 2020/2021 (20202)
     - [01_Assignment (PHP Basics)](https://github.com/Yomna-J/YoumnaJaza-SWE322/blob/main/Assignments/01_Assignment.php)
     - [03_Assignment (Login System)](https://github.com/Yomna-J/YoumnaJaza-SWE322/tree/main/Assignments/A03)
     - [04_Assignment (Login System2)](https://github.com/Yomna-J/YoumnaJaza-SWE322/tree/main/Assignments/A04)
-  
+* [Project](https://github.com/Yomna-J/YoumnaJaza-SWE322/tree/main/Project)
+    - Team Members:
+        - [Halah Allabun](https://github.com/halahAllabun)
+        - [Lamia Alshuwaier](https://github.com/Lamia-az)
