@@ -11,6 +11,23 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
 </style>
 <body>
 
@@ -35,9 +52,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <!-- Header -->
-<header class="w3-container w3-center" style="padding:128px 16px; background-image: url(pic1.jpg); background-size: cover;  background-repeat: no-repeat; padding-bottom: 20%;">
-    <h3> CHALLENGE YOURSELF </h3>
-    <h4> GET YOUR LIFE HEALTHY. </h4>
+<header class="w3-container w3-center" style="padding:128px 16px; background-image: url(pic1.jpg); background-size: cover;  background-repeat: no-repeat; padding-bottom: 38%;">
+
+    <div class="bg-text">
+        <h2><strong> CHALLENGE YOURSELF </strong></h2>
+        <h3> GET YOUR LIFE HEALTHIER. </h3>
+    </div> 
 </header>
 
 <!-- First Grid -->
