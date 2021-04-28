@@ -17,8 +17,7 @@
                 if(password_verify($_POST['password'], $result_row[3])){
                     session_start();
                     $_SESSION['id'] = $result_row[0];
-                    echo "hehr";
-                  header('location: Home.php');
+                    header('location: Home.php');
                 } else {
                     die('Invalid username or password.');
                 }
