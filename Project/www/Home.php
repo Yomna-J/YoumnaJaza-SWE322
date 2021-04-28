@@ -3,7 +3,10 @@
     # checkbox
     # confirmation & updating db (update bookings update classes)
 
-    #TO DO: check allowed access
+    session_start();
+    if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
+        header("Location: Login.html");
+    }
 
     include("../config/db_login.php");
 
@@ -38,11 +41,20 @@
             $num_classes = count($classes); # num of user choices length of array
             for ($i = 0; $i < $num_classes; $i++) {
                 $new_num_trainees = $num_all_trainees[$classes[$i]]+1;
+                //session_start();
+                $user_id = $_SESSION[ 'id'];
                 $query = "UPDATE `classes` SET `number_of_trainees`= '$new_num_trainees' WHERE class_id = '$classes[$i]'";
+                $query2 = "INSERT INTO `bookings`(`class_id`, `user_id`) VALUES ('$classes[$i]', '$user_id')";
+                $result2 = mysqli_query($connection, $query2);
+
                 $result = mysqli_query($connection, $query);
-                if (!$result = mysqli_query($connection, $query)) {
+                if (!$result = mysqli_query($connection, $query) && !$result2 = mysqli_query($connection, $query2)) {
+                    echo mysqli_error($connection);
                     die('An error occurred');
                 }
+
+              
+               
             }
         }
     }
