@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>
+    </head
 
     <?php
         # get available courses 
@@ -23,7 +23,6 @@
         $query = "SELECT * FROM `classes` ";
         $result = mysqli_query($connection, $query);
 
-         
 
         if ($result = mysqli_query($connection, $query)) {
             if (mysqli_num_rows($result) > 0) {
@@ -42,7 +41,7 @@
                             }
                         } 
                     }  
-                echo "<input type='submit' name='confirm' value='Confirm' /> </form>";
+                echo "<input type='submit' name='confirm' value='Confirm' class='btn btn-primary mb-2'/> </div></form>";
             }
         }
 
@@ -67,8 +66,6 @@
                         die('An error occurred');
                     }
 
-                
-                
                 }
             }
         }
