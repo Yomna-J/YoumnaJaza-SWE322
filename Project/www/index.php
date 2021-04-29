@@ -86,7 +86,11 @@
 
     <!-- Header -->
     <header class="w3-container w3-center" style="padding:128px 16px; background-image: url(../src/imgs/background.jpg); background-size: cover;  background-repeat: no-repeat; padding-bottom: 38%;">
-      
+
+        <div class="bg-text">
+            <h2><strong> CHALLENGE YOURSELF </strong></h2>
+            <h3> GET YOUR LIFE HEALTHIER. </h3>
+        </div> 
     </header>
 
     <!-- First Grid -->
