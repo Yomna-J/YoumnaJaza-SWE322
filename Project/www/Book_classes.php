@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
-        header("Location: Login.html");
+        header("Location: Login.php");
     }
 ?>
 
@@ -28,19 +28,12 @@
         <div class="w3-top">
             <div class="w3-bar w3-card w3-left-align w3-large" style="background-color: #AA102D; color:#f1f1f1;">
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-<<<<<<< HEAD
             <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-white" style="text-decoration: none;">Home</a>
             <a href="index.php#first-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">About Us</a>
             <a href="index.php#second-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Our Vision</a>
             <a href="index.php#footer" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Contact Us</a>
             <a href="Book_classes.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white-large w3-hover-white" style="text-decoration: none;">Book Classes</a>
-=======
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Home</a>
-            <a href="#first-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">About Us</a>
-            <a href="#second-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Our Vision</a>
-            <a href="#footer" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Contact Us</a>
-            <a href="Book_classes.php" class="w3-bar-item w3-button w3-padding-large w3-white" style="text-decoration: none;">Book Classes</a>
->>>>>>> 81bdfcd25cdb73c87828f35c433bf1bca7114704
+
             </div>
 
             <!-- Navbar on small screens -->
