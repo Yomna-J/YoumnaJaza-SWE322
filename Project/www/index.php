@@ -53,6 +53,11 @@
             <a href='Login.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right;'>Login</a>
             
             ";
+        }else{
+          $username= $_SESSION['username'];
+          echo "<a href='Logout.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right;'>Log Out</a>";
+          echo "<a href='#' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right; '>$username</a>";
+
         }
         ?>
       

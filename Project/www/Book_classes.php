@@ -33,7 +33,11 @@
             <a href="index.php#second-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Our Vision</a>
             <a href="index.php#footer" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Contact Us</a>
             <a href="Book_classes.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white-large w3-hover-white" style="text-decoration: none;">Book Classes</a>
-
+            <?php
+                $username= $_SESSION['username'];
+                echo "<a href='Logout.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right;text-decoration:none;'>Log Out</a>";
+                echo "<a href='#' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right;text-decoration:none;'>$username</a>";
+            ?>
             </div>
 
             <!-- Navbar on small screens -->
@@ -47,7 +51,6 @@
             </div>
         </div>
 
-
         <!-- First Grid -->
         <div class="w3-row-padding w3-padding-64 w3-container" id="first-grid">
             <div class="w3-content">
@@ -57,8 +60,7 @@
                         include("../config/db_login.php");
                         $user_id = $_SESSION[ 'id'];
 
-                        $query = "SELECT * FROM `classes` WHERE `class_id` NOT IN (SELECT `class_id` FROM `bookings` WHERE `user_id` = '$user_id');
-                        ";
+                        $query = "SELECT * FROM `classes` WHERE `class_id` NOT IN (SELECT `class_id` FROM `bookings` WHERE `user_id` = '$user_id');";
                         $result = mysqli_query($connection, $query);
     
                         if ($result = mysqli_query($connection, $query)) {
@@ -83,31 +85,30 @@
                                 }echo "</table><br><input type='submit' name='confirm' value='Confirm' class='btn btn-primary mb-2' style='font-size:21px; border-color:#AA102D; background-color:#AA102D'/> </div></form>";
                             }
                         }
-                    ?>
-                </div>
-            </div>
-        </div>
-            <?php
-                # get available courses 
-                # checkbox
-                # confirmation & updating db (update bookings update classes)
-                if (isset($_POST['confirm']) && !empty($_POST['Classes'])) { #ToDO: doesn't check
+
+                    if (isset($_POST['confirm']) && !empty($_POST['classes'])) { #ToDO: doesn't check
+                       
                         $classes = $_POST['classes']; // id{1,2,3,4} 
                         $num_classes = count($classes); # num of user choices length of array
+
                         for ($i = 0; $i < $num_classes; $i++) {
                             $new_num_trainees = $num_all_trainees[$classes[$i]]+1;
                             $query = "UPDATE `classes` SET `number_of_trainees`= '$new_num_trainees' WHERE class_id = '$classes[$i]'";
                             $query2 = "INSERT INTO `bookings`(`class_id`, `user_id`) VALUES ('$classes[$i]', '$user_id')";
+
                             $result2 = mysqli_query($connection, $query2);
                             $result = mysqli_query($connection, $query);
-                            if (!$result = mysqli_query($connection, $query) && !$result2 = mysqli_query($connection, $query2)) {
-                                echo mysqli_error($connection);
+                            if (!$result = mysqli_query($connection, $query) || !$result2 = mysqli_query($connection, $query2)) {
                                 die('An error occurred');
                             }
+                            echo "Your booking has been confirmed.";
                         }
                 }else if(isset($_POST['confirm']) && empty($_POST['classes']))  {
                     die ("You didn't select any classes.");
                 } 
-            ?>
+                    ?>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
