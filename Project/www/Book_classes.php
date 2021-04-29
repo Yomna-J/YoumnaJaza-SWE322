@@ -101,11 +101,15 @@
                             if (!$result = mysqli_query($connection, $query) || !$result2 = mysqli_query($connection, $query2)) {
                                 die('An error occurred');
                             }
-                            echo "Your booking has been confirmed.";
                         }
+                        echo "<br>Your booking has been confirmed.";
+                        echo "<meta http-equiv='refresh' content='2'>";
+                      
+
                 }else if(isset($_POST['confirm']) && empty($_POST['classes']))  {
                     die ("You didn't select any classes.");
                 } 
+
                     ?>
                 </div>
             </div>
