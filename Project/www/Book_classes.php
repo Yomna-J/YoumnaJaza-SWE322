@@ -28,11 +28,11 @@
         <div class="w3-top">
             <div class="w3-bar w3-card w3-left-align w3-large" style="background-color: #AA102D; color:#f1f1f1;">
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white" style="text-decoration: none;">Home</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Home</a>
             <a href="#first-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">About Us</a>
             <a href="#second-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Our Vision</a>
             <a href="#footer" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Contact Us</a>
-            <a href="Book_classes.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white-large w3-hover-white" style="text-decoration: none;">Book Classes</a>
+            <a href="Book_classes.php" class="w3-bar-item w3-button w3-padding-large w3-white" style="text-decoration: none;">Book Classes</a>
             </div>
 
 
@@ -52,7 +52,7 @@
         <div class="w3-row-padding w3-padding-64 w3-container" id="first-grid">
             <div class="w3-content">
                 <div class="w3-twothird">
-                    <h1>Book Classes</h1>
+                    <h1>Book Classes</h1><br>
                     <?php
                         include("../config/db_login.php");
                         $query = "SELECT * FROM `classes` ";
@@ -62,17 +62,22 @@
                             if (mysqli_num_rows($result) > 0) {
                                 $result = mysqli_query($connection, $query);
                                 echo "<form action='' method='post'>";
-                                echo "<div class='form-check'>";
+                                echo "<div class='form-check'> <table class='table'> <tr class='danger' style='font-size:20px'><td>Class Name</td>
+                                    <td>Trainer Name</td> <td>Date</td> </tr>";
                                 $num_all_trainees = array();
                                 while ($result_row = mysqli_fetch_row($result)) { # Loop over all classes
                                     if ($result_row[4] < $result_row[5]) { # if it doesn't exceed max
                                         if (date('Y-m-d') <= $result_row[3]) { # checks if the class date has passed
-                                            echo "<input class='form-check-input' type='checkbox' name='classes[]' id='flexCheckChecked'
-                                                value='$result_row[0]' style='width:20px; height:20px;'/> <label style=' font-weight:normal;font-size: 20px' class='form-check-label' for='flexCheckDefault'> $result_row[1] </label> <br />";                                                
+                                            echo " <tr> <td>
+                                            <input class='form-check-input' type='checkbox' name='classes[]' id='flexCheckChecked'
+                                                value='$result_row[0]' style='width:20px; height:20px;'/> <label style=' font-weight:normal;font-size: 18px' class='form-check-label' for='flexCheckDefault'> $result_row[1] </label>  </td>  
+                                                <td>$result_row[2]</td> <td>$result_row[3]</td> </tr>
+                                                
+                                                ";                                              
                                             $num_all_trainees[$result_row[0]] = $result_row[4]; // array of all classes id , number of trainees                    
                                             }
                                         } 
-                                }echo "<br><input type='submit' name='confirm' value='Confirm' class='btn btn-primary mb-2' style='font-size:21px; border-color:#AA102D; background-color:#AA102D'/> </div></form>";
+                                }echo "</table><br><input type='submit' name='confirm' value='Confirm' class='btn btn-primary mb-2' style='font-size:21px; border-color:#AA102D; background-color:#AA102D'/> </div></form>";
                             }
                         }
                     ?>
