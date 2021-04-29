@@ -16,6 +16,7 @@
                 if(password_verify($_POST['password'], $result_row[3])){
                     session_start();
                     $_SESSION['id'] = $result_row[0];
+                    $_SESSION['user_name'] = $result_row[1];
                     header('location: Book_classes.php');
                 } else {
                     die('Invalid username or password.');
