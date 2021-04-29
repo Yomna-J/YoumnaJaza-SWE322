@@ -24,10 +24,18 @@
     <!-- --------------NavBar--------------- -->
     <div class="w3-top">
         <div class="w3-bar w3-card w3-left-align w3-large" style="background-color: #AA102D; color:#f1f1f1;">
+<<<<<<< HEAD
             <a href="index.php#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Home</a>
             <a href="index.php#first-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">About Us</a>
             <a href="index.php#second-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Our Vision</a>
             <a href="index.php#footer" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Contact Us</a>
+=======
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Home</a>
+            <a href="#first-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">About Us</a>
+            <a href="#second-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Our Vision</a>
+            <a href="#footer" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Contact Us</a>
+>>>>>>> 5d0515879eb94f96642edc7445f9fabbf7e2c23e
             <a href="Book_classes.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Book Classes</a>
             <a href="Login.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float:right; text-decoration: none;">Login</a>
 
@@ -41,7 +49,7 @@
             <a href="index.php#second-grid" class="w3-bar-item w3-button w3-padding-large">Book Classes</a>
             <a href="Book_classes.php" class="w3-bar-item w3-button w3-padding-large">Book Classes</a>
             <a href="Registration.html" class="w3-bar-item w3-button w3-padding-large">Register</a>
-            <a href="Login.html" class="w3-bar-item w3-button w3-padding-large">Login</a>
+            <a href="Login.php" class="w3-bar-item w3-button w3-padding-large">Login</a>
         </div>
     </div>
 
@@ -69,11 +77,21 @@
                 </div>
             </div>
             <div class="col-sm-5">
-                <input type="submit" name="register" value="Register" class="btn btn-primary mb-2" style="font-size:14px; border-color:#AA102D; background-color:#AA102D"">
+                <input type="submit" name="register" value="Register" class="btn btn-primary mb-2" style="font-size:14px; border-color:#AA102D; background-color:#AA102D">
             </div>
         </form>
     </div>
-
+    <script>
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+      </script>
 
 
 </body>
