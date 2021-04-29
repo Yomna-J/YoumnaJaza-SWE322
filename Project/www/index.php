@@ -49,8 +49,8 @@
           if (!isset($_SESSION['id']) || empty($_SESSION['id']) || session_status() === PHP_SESSION_NONE  ){
 
             echo "
-            <a href='Registration.html' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right;'>Register</a>
-            <a href='Login.html' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right;'>Login</a>
+            <a href='Registration.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right;'>Register</a>
+            <a href='Login.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right;'>Login</a>
             
             ";
         }
@@ -69,8 +69,8 @@
         <?php
           if (!isset($_SESSION['id']) || empty($_SESSION['id']) || session_status() === PHP_SESSION_NONE  ){
             echo "
-            <a href='Registration.html' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right;'>Register</a>
-            <a href='Login.html' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right;'>Login</a>
+            <a href='Registration.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right;'>Register</a>
+            <a href='Login.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white' style='float:right;'>Login</a>
             
             ";
         }
