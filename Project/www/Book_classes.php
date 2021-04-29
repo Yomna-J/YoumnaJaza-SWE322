@@ -35,7 +35,6 @@
             <a href="Book_classes.php" class="w3-bar-item w3-button w3-padding-large w3-white" style="text-decoration: none;">Book Classes</a>
             </div>
 
-
             <!-- Navbar on small screens -->
             <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
             <a href="#first-grid" class="w3-bar-item w3-button w3-padding-large">About Us</a>
