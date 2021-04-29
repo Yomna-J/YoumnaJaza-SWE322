@@ -19,7 +19,7 @@
                 exit();
             }
             else {
-                header("Location: Login.html");
+                header("Location: Login.php");
             } 
             $stmt->close();
         }
