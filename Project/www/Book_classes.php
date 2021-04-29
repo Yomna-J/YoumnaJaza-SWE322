@@ -55,7 +55,10 @@
                     <h1>Book Classes</h1><br>
                     <?php
                         include("../config/db_login.php");
-                        $query = "SELECT * FROM `classes` ";
+                        $user_id = $_SESSION[ 'id'];
+
+                        $query = "SELECT * FROM `classes` WHERE `class_id` NOT IN (SELECT `class_id` FROM `bookings` WHERE `user_id` = '$user_id');
+                        ";
                         $result = mysqli_query($connection, $query);
     
                         if ($result = mysqli_query($connection, $query)) {
@@ -93,7 +96,6 @@
                         $num_classes = count($classes); # num of user choices length of array
                         for ($i = 0; $i < $num_classes; $i++) {
                             $new_num_trainees = $num_all_trainees[$classes[$i]]+1;
-                            $user_id = $_SESSION[ 'id'];
                             $query = "UPDATE `classes` SET `number_of_trainees`= '$new_num_trainees' WHERE class_id = '$classes[$i]'";
                             $query2 = "INSERT INTO `bookings`(`class_id`, `user_id`) VALUES ('$classes[$i]', '$user_id')";
                             $result2 = mysqli_query($connection, $query2);
