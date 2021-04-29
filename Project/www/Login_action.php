@@ -3,7 +3,7 @@
     include("../config/db_login.php");
     include("../src/php/sanitizeInput.php");
 
-    if (isset($_POST['login'])) {
+    if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])) {
         $username= fix_string($_POST['username']);
         $password= fix_string($_POST['password']); 
 
@@ -27,5 +27,7 @@
         } else {
              die("Connection error.");
             }
+        }else if(isset($_POST['login'])){
+            die("Please fill all fields.");
         }
 ?>
