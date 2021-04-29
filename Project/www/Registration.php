@@ -32,6 +32,8 @@
     <!-- --------------NavBar--------------- -->
     <div class="w3-top">
         <div class="w3-bar w3-card w3-left-align w3-large" style="background-color: #AA102D; color:#f1f1f1;">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+
             <a href="index.php#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Home</a>
             <a href="index.php#first-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">About Us</a>
             <a href="index.php#second-grid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="text-decoration: none;">Our Vision</a>
@@ -44,11 +46,11 @@
 
             <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="index.php#first-grid" class="w3-bar-item w3-button w3-padding-large">Home</a>
             <a href="index.php#first-grid" class="w3-bar-item w3-button w3-padding-large">About Us</a>
             <a href="index.php#second-grid" class="w3-bar-item w3-button w3-padding-large">Our Vision</a>
             <a href="index.php#second-grid" class="w3-bar-item w3-button w3-padding-large">Book Classes</a>
             <a href="Book_classes.php" class="w3-bar-item w3-button w3-padding-large">Book Classes</a>
-            <a href="Registration.html" class="w3-bar-item w3-button w3-padding-large">Register</a>
             <a href="Login.php" class="w3-bar-item w3-button w3-padding-large">Login</a>
         </div>
     </div>
