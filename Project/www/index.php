@@ -107,8 +107,7 @@
         </div>
 
       <div class="w3-third w3-center">
-        <img src="../src/imgs/icon1.png" class="fa fa-anchor w3-padding-64" style="width: 80%; margin-top:15%">
-          <!-- <i class="fa fa-anchor w3-padding-64 w3-text-red"></i> -->
+        <a href="https://www.flaticon.com/free-icon/dumbbell_3043888"><img src="../src/imgs/icon1.png" class="fa fa-anchor w3-padding-64" style="width: 80%; margin-top:15%"></a>
         </div>
       </div>
     </div>
@@ -117,7 +116,7 @@
     <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="second-grid">
       <div class="w3-content">
         <div class="w3-third w3-center">
-          <img src="../src/imgs/icon2.png" class="fa fa-anchor w3-padding-64" style="width: 80%; margin-top:15%;margin-left:-30px">
+          <a href="https://www.flaticon.com/free-icon/stretching-exercises_10699"><img src="../src/imgs/icon2.png" class="fa fa-anchor w3-padding-64" style="width: 80%; margin-top:15%;margin-left:-30px"></a>
         </div>
 
         <div class="w3-twothird">
