@@ -1,5 +1,5 @@
 # SWE322
-This is a repository for Advanced Web Programming course. It includes Assignments, Practical Sessions, and the Project. 
+This is a repository for Advanced Web Programming course which is about back-end development using PHP and MySQL. It includes Assignments, Practical Sessions, and the Project. 
   
 By: Youmna Jaza  
 Course: SWE322 Advanced Web Programming  
@@ -19,3 +19,10 @@ Date: Second Semester 2020/2021 (20202)
     - Team Members:
         - [Halah Allabun](https://github.com/halahAllabun)
         - [Lamia Alshuwaier](https://github.com/Lamia-az)
+
+***
+# Project Screenshots
+<p align="center">
+  <img src="https://github.com/Yomna-J/YoumnaJaza-SWE322/blob/main/website.gif" style="width:800px;"/>
+</p>
+
