@@ -145,6 +145,7 @@
         <i class="fa fa-linkedin w3-hover-opacity"></i>
     </div>
     <p>Designed by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    <p><a href="https://www.freepik.com/photos/man">Man photo created by tawatchai07 - www.freepik.com</a></p></p>
     </footer>
 
     <script>
