@@ -21,7 +21,7 @@ Date: Second Semester 2020/2021 (20202)
         - [Lamia Alshuwaier](https://github.com/Lamia-az)
 
 ***
-# Project Screenshots
+# Project Screenshot
 <p align="center">
   <img src="https://github.com/Yomna-J/YoumnaJaza-SWE322/blob/main/website.gif" style="width:800px;"/>
 </p>
